@@ -1,3 +1,158 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+.cabecalho {
+    position: relative;
+    @include flex($align: center, $justify: space-between);
+    padding: 0 4.88rem;
+    background-color: #fff;
+
+    &__logo {
+        width: 15rem;
+        margin-bottom: 2px;
+    }
+
+    &__container {
+        @include flex($align: center, $gap: 6.1rem);
+
+    }
+
+    &__links {
+        @include flex($gap: 3.12rem);
+
+    }
+
+    &__lista {
+        list-style: none;
+        @include flex($gap: 4.88rem);
+
+        &--tipos {
+            @include flex($direction: column, $gap: 0.32rem);
+
+        }
+    }
+
+    &__link-item {
+
+        font-size: 1.33rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: inherit;
+        font-weight: 700;
+        line-height: 1;
+        border-bottom: solid 2px transparent;
+
+        &--ofertas {
+            color: $cor-vermelha;
+        }
+
+        &:hover {
+            border-bottom-color: currentColor;
+        }
+
+        &--tipo {
+            text-transform: none;
+            font-weight: 400;
+            color: $cor-cinza;
+
+            &:hover {
+                border-bottom: none;
+                text-decoration: underline;
+                text-decoration-thickness: 1px;
+            }
+        }
+    }
+
+    &__item-lista {
+        padding: 3.12rem 0;
+
+        &:hover {
+            & .cabecalho__expansao-tipos {
+                display: flex;
+            }
+        }
+    }
+
+    &__expansao-tipos {
+        position: absolute;
+        @include flex($gap:4.88rem);
+        display: none;
+        left: 0;
+        right: 0;
+        top: 100%;
+        padding: 3.12rem 4.88rem;
+        background-color: #fff;
+        box-shadow: 0 0 0.3rem rgba($color: $cor-preta, $alpha: 0.1);
+    }
+
+    &__link-imagem {
+        max-height: 40rem;
+    }
+
+    &__icones {
+        @include flex($align: center, $justify: space-between, $gap: 1.2rem);
+    }
+
+    &__icone {
+        color: inherit;
+        fill: currentColor;
+        width: 2rem;
+        height: 2rem;
+        text-decoration: none;
+
+        &--logado {
+            fill: transparent;
+            stroke: currentColor;
+
+        }
+
+        &--menor {
+            width: 1.6rem;
+        }
+    }
+
+    &__link--logado {
+
+        & .cabecalho__icone {
+            display: none;
+
+            &--logado {
+                display: block;
+            }
+        }
+    }
+
+    &__link-icone {
+        color: inherit;
+        transition: ease 200ms;
+
+        &:hover {
+            transform: scale(1.1);
+            color: $cor-vermelha;
+        }
+
+        &--logado {
+            display: none;
+        }
+
+    }
+
+    &__icone-carrinho {
+        position: relative;
+    }
+
+    &__items {
+        @include flex($align: center, $justify: center);
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(55%, -55%);
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        background-color: $cor-vermelha;
+        font-size: 1.2rem;
+
+        &--visivel {
+            display: flex;
+        }
+    }
+}

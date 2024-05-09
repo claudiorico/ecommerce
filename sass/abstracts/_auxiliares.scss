@@ -1,0 +1,11 @@
+$cor-preta: #000;
+$cor-cinza: #626262;
+$cor-vermelha: red;
+
+@mixin flex($direction: row, $align: stretch, $justify: start, $gap: 0, $wrap: nowrap) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
