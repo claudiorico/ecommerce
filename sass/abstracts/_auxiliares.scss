@@ -1,6 +1,7 @@
 $cor-preta: #000;
 $cor-cinza: #626262;
-$cor-vermelha: red;
+$cor-vermelha: #ff0000;
+$cor-cinza-escuro: #a7a7a780;
 
 @mixin flex($direction: row, $align: stretch, $justify: start, $gap: 0, $wrap: nowrap) {
     display: flex;

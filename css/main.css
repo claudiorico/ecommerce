@@ -16,6 +16,11 @@ body {
   background-color: #000;
 }
 
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
 .cabecalho {
   position: relative;
   display: flex;
@@ -69,7 +74,7 @@ body {
   border-bottom: solid 2px transparent;
 }
 .cabecalho__link-item--ofertas {
-  color: red;
+  color: #ff0000;
 }
 .cabecalho__link-item:hover {
   border-bottom-color: currentColor;
@@ -141,7 +146,7 @@ body {
 }
 .cabecalho__link-icone:hover {
   transform: scale(1.1);
-  color: red;
+  color: #ff0000;
 }
 .cabecalho__link-icone--logado {
   display: none;
@@ -163,11 +168,55 @@ body {
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
-  background-color: red;
+  background-color: #ff0000;
   font-size: 1.2rem;
 }
 .cabecalho__items--visivel {
   display: flex;
+}
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1694/573.5;
+  overflow: hidden;
+}
+.carrossel__imagens {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+}
+.carrossel__item {
+  min-width: 100%;
+  height: 100%;
+}
+.carrossel__botoes {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.86rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -2rem);
+}
+.carrossel__botao {
+  width: 12.5rem;
+  height: 0.2rem;
+  background-color: rgba(167, 167, 167, 0.5019607843);
+  border-radius: 5rem;
+}
+.carrossel__preenchimento-botao {
+  transition: width ease-out 5s;
+  width: 1%;
+  height: 100%;
+  background-color: white;
+}
+.carrossel__preenchimento-botao--cheio {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
